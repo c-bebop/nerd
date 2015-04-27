@@ -10,6 +10,8 @@ Copyright (c) 2015
 Institute of Software Engineering and Theoretical Computer Science 
 Quality and Usability Lab
 Berlin Institute of Technology
+Florian Willich
+Gabriel Reimers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
