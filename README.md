@@ -1,7 +1,7 @@
 # N.E.R.D.
 
 This webpage was made for the "Nerd, Entertainment, Research and Design Talks" at the
-[Quality and Usability Lab](https://www.qu.tu-berlin.de/ "Quality and Usability Lab"] of the [Institute of Technology Berlin](https://www.tu-berlin.de/ "Institute of Technology Berlin").
+[Quality and Usability Lab](https://www.qu.tu-berlin.de/ "Quality and Usability Lab") of the [Institute of Technology Berlin](https://www.tu-berlin.de/ "Institute of Technology Berlin").
 
 ## License
 
