@@ -1,0 +1,8 @@
+#IDE
+.idea
+
+#Error Log
+errorlog.html
+
+#Config File
+config.php
