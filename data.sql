@@ -6,7 +6,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `products`
 --
 
-CREATE TABLE `talk` (
+CREATE TABLE `talks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` varchar(256) NOT NULL,
