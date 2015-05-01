@@ -33,35 +33,42 @@ img
 /**
 * Text color of navigation.
 **/
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a
+{
     color: #ffffff;
 }
 /**
 * Navbar element hover style
 **/
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover
+{
     color: #ffffff;
     background-color: #5EADBF;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand
+{
     color: #ffffff;
 }
 
 /**
 * TODO: Does not do anything....
 **/
-.navbar-default .navbar-brand > li > a:hover {
+.navbar-default .navbar-brand > li > a:hover
+{
     color: #ffffff;
     background-color: #5EADBF;
 }
+
 
 /**
 * ========================================================================
 * JUMBOTRON
 * ========================================================================
 **/
-.jumbotron {
+
+.jumbotron
+{
     margin-top: 0;
     margin-bottom: 30px;
     background-color: #4B9EBF;
@@ -70,12 +77,14 @@ img
     color: #FFF;
 }
 .jumbotron h1,
-.jumbotron .h1 {
+.jumbotron .h1
+{
     color: #3370A6;
     font-size: 30px;
 }
 
-.jumbotron p {
+.jumbotron p
+{
     line-height: 1.4;
     color: #FFF;
 }
@@ -95,14 +104,16 @@ img
 
 .form-search { width: 300px; }
 
-.thumbnail {
+.thumbnail
+{
     margin-bottom: 25px;
     padding: 0;
     background-size: cover;
     background-position: center center;
 }
 
-.thumbnail .caption {
+.thumbnail .caption
+{
     padding: 9px;
     margin-top: 69%;
     background-color: rgba(75, 158, 191, 0.6);
@@ -113,7 +124,8 @@ img
 .thumbnail h4 a:hover { color: white; }
 
 
-.thumbnail h4 {
+.thumbnail h4
+{
     overflow: hidden;
     margin: 0 0 10px;
     text-overflow: ellipsis;
@@ -121,14 +133,16 @@ img
     line-height: 1.2;
 }
 .thumbnail:hover .buttons-edit { visibility: visible; }
-.thumbnail img {
+.thumbnail img
+{
     display: block;
     margin: 0 auto;
     height: 200px;
     border-radius: 4px 4px 0 0;
 }
 
-.buttons-edit {
+.buttons-edit
+{
     position: absolute;
     top: 10px;
     right: 25px;
