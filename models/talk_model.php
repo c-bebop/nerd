@@ -33,7 +33,9 @@ class Talk_Model extends Model {
     * @return     mixed                The Talk specified by the id.
     */
    public function get_talk($id) {
-      return $this->_db->select('SELECT * FROM talks WHERE id = :id', [':id' => $id])[0];
+      $test_array = array(':id' => $id);
+      $result = $this->_db->select('SELECT * FROM talks WHERE id = :id', $test_array);
+      return $result[0];
    }
 
    /**
@@ -60,7 +62,8 @@ class Talk_Model extends Model {
 
    public function increase($id) {
       $stmt = $this->_db->prepare('UPDATE talks SET votes = votes+1 WHERE id = :id');
-      return $stmt->execute([':id' => $id]);
+      $test_array = array(':id' => $id);
+      return $stmt->execute($test_array);
    }
 
 }
