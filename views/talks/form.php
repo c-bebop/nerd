@@ -10,50 +10,58 @@
 
         <?php
         $talk = $data['talk'];
-        if (isset($talk['id'])) :
-            ?>
+        ?>
 
-            <form role="form" action="<?= DIR ?>talks/insert" method="POST">
-                <input class="form-control" type="text" name="title" placeholder="Title of Talk" value="<?= $talk['title'] ?>">
-                <textarea class="form-control" type="text" name="description" placeholder="Description"
-                          rows="4"><?= $talk['description'] ?></textarea>
-                <input class="form-control" type="text" name="host" placeholder="Host Name" value="<?= $talk['host'] ?>">
-                <input class="form-control" type="url" name="url" placeholder="Info URL" value="<?= $talk['url'] ?>">
-                <div class="form-group">
-                    <input class="form-control" type="url" name="image" placeholder="Image URL"
-                           value="<?= $talk['image'] ?>">
-                    <p class="help-block">Please use a <a href="http://search.creativecommons.org/" target="_blank">creative commons image</a>.</p>
-                </div>
+        <form role="form" action="<?= DIR ?>talks/insert" method="POST" data-toggle="validator">
+            <div class="form-group">
+
+                <input class="form-control" type="text" name="title" id="titleField" placeholder="Title of Talk"
+                       value="<?= $talk['title'] ?>" required>
+                <span class="help-block with-errors"></span>
+            </div>
+            <div class="form-group">
+            <textarea class="form-control" type="text" name="description" id="descriptionArea" placeholder="Description what it's about"
+                      rows="4" required><?= $talk['description'] ?></textarea>
+                <span class="help-block with-errors"></span>
+            </div>
+            <div class="form-group"><input class="form-control" type="text" name="host" placeholder="Name of host or speaker"
+                                           value="<?= $talk['host'] ?>" required>
+                <span class="help-block with-errors"></span>
+            </div>
+            <div class="form-group"><input class="form-control" type="url" name="url" placeholder="Info URL (optional)"
+                                           value="<?= $talk['url'] ?>">
+                <span class="help-block with-errors"></span>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="url" name="image" placeholder="Image URL (optional)"
+                       value="<?= $talk['image'] ?>">
+                <span class="help-block with-errors"></span>
+
+                <p class="help-block">Please link a <a href="http://search.creativecommons.org/" target="_blank">creative
+                        commons image</a>.</p>
+
+            </div>
+
+
+            <?php
+            if (isset($talk['id'])) :
+                ?>
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-primary btn-block">Update</button>
                     </div>
                 </div>
                 <input type="hidden" name="id" value="<?= $talk['id'] ?>">
-            </form>
-
-        <?php else : ?>
-
-            <form role="form" action="<?= DIR ?>talks/insert" method="POST">
-                <input class="form-control" type="text" name="title" placeholder="Title of Talk" value="<?= $talk['title'] ?>">
-                <textarea class="form-control" type="text" name="description" placeholder="Description"
-                          rows="4"><?= $talk['description'] ?></textarea>
-                <input class="form-control" type="text" name="host" placeholder="Host Name" value="<?= $talk['host'] ?>">
-                <input class="form-control" type="url" name="url" placeholder="Info URL" value="<?= $talk['url'] ?>">
-
-                <div class="form-group">
-                    <input class="form-control" type="url" name="image" placeholder="Image URL"
-                           value="<?= $talk['image'] ?>">
-                    <p class="help-block">Please use a <a href="http://search.creativecommons.org/" target="_blank">creative commons image</a>.</p>
-                </div>
+            <?php else : ?>
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-primary btn-block">Create</button>
                     </div>
                 </div>
-            </form>
+            <?php endif; ?>
 
-        <?php endif; ?>
+        </form>
+
 
     </div>
     <!-- / .panel-body -->
