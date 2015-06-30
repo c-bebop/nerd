@@ -17,9 +17,12 @@ define('DB_NAME','your_db_name');
 define('DB_USER','User');
 define('DB_PASS','SuperSecretPassword');
 
-//set prefix for sessions
-//TODO: Better description
-define('SESSION_PREFIX','your_prefix_');
+/**
+ * This is the session prefix.
+ */
+define('SESSION_PREFIX','nerd_');
 
-//optionall create a constant for the name of the site
-define('SITETITLE','AWESOME SITE TITLE!');
+/**
+ * The sitetitle which we choose to be 'NERD'.
+ */
+define('SITETITLE','NERD');
