@@ -18,6 +18,12 @@ define('DB_USER','User');
 define('DB_PASS','SuperSecretPassword');
 
 /**
+ * These shall from now on be known as THE PASSWORD HASHES
+ */
+define('PW_MASTER', '$1$1cdTYDNY$NkGmjOZ2IMddVVHezrQNX1');
+define('PW_USER', '$1$1cdTYDNY$NkGmjOZ2IMddVVHezrQNX1');
+
+/**
  * This is the session prefix.
  */
 define('SESSION_PREFIX','nerd_');

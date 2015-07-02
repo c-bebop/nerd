@@ -7,8 +7,11 @@ class Controller {
 	protected $_url;
 
 	function __construct() {
-		$this->_view = new View();
 		$this->_getUrl();
+		if (!User::is_logged_in() && end($this->_url) !== 'login') {
+			URL::redirect('talks/login');
+		}
+		$this->_view = new View();
 	}
 
 	public function loadModel($name) {

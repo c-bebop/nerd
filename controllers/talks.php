@@ -16,6 +16,25 @@ class Talks extends Controller {
         $this->_view->render('footer');
     }
 
+    public function login() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            User::login($_POST['password']);
+
+            if (!User::is_logged_in()) {
+                Message::set('Password falsch', 'danger');
+                URL::redirect('talks/login/?redirected');
+            }
+            URL::redirect();
+        }
+        else if (!User::is_logged_in() || isset($_GET['redirected'])) {
+            $data['title'] = 'Login';
+            $this->_view->render('login', $data);
+        }
+        else {
+            URL::redirect();
+        }
+    }
+
     public function add() {
         $data['title'] = 'New Talk';
         $data['form_header'] = 'Add a new Talk';

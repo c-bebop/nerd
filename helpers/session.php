@@ -11,7 +11,7 @@ class Session {
       }
    }
 
-   public static function set($key, $value) {
+   public static function set($key, $value = true) {
       return $_SESSION[SESSION_PREFIX . $key] = $value;
    }
 
