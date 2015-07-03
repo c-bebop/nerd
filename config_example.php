@@ -18,7 +18,7 @@ define('DB_USER','User');
 define('DB_PASS','SuperSecretPassword');
 
 /**
- * These shall from now on be known as THE PASSWORD HASHES
+ * The following defines are the passwords to gain user or master rights. 
  */
 define('PW_MASTER', '$1$1cdTYDNY$NkGmjOZ2IMddVVHezrQNX1');
 define('PW_USER', '$1$1cdTYDNY$NkGmjOZ2IMddVVHezrQNX1');

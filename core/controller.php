@@ -6,6 +6,10 @@ class Controller {
 	protected $_model;
 	protected $_url;
 
+	/**
+	* If the user is not logged in and the url is not 'login', there will be a 
+	* redirect to 'talks/login'.
+	**/
 	function __construct() {
 		$this->_getUrl();
 		if (!User::is_logged_in() && end($this->_url) !== 'login') {
