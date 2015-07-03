@@ -4,18 +4,13 @@
     <meta charset="utf-8">
     <title><?= $data['title'] . ' - ' . SITETITLE ?></title>
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nerd, Entertainment, Research and Design Talks.">
+
     <link rel="stylesheet" href="<?= URL::STYLES('bootstrap.min') ?>">
     <link rel="stylesheet" href="<?= URL::STYLES('style') ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="My first LiveScript Application.">
-
-    <meta name="author" content="Maximilian Beier">
-    <meta name="author" content="Florian Willich">
-    <meta name="author" content="Gabriel">
-
 
 </head>
 <body>

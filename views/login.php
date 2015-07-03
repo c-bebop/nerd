@@ -5,7 +5,7 @@
     <title><?= $data['title'] . ' - ' . SITETITLE ?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="My first LiveScript Application.">
+    <meta name="description" content="Nerd, Entertainment, Research and Design Talks.">
 
     <link rel="stylesheet" href="<?= URL::STYLES('bootstrap.min') ?>">
     <link rel="stylesheet" href="<?= URL::STYLES('style') ?>">
