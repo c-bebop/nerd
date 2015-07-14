@@ -42,23 +42,44 @@
 
             </div>
 
-
             <?php
-            if (isset($talk['id'])) :
+            if (isset($talk['id'])) {
+
+                if (Session::get('master')) {
+
+                    ?>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="event_date" placeholder="Date of event."
+                                                   value="<?= $talk['event_date'] ?>">
+                        <span class="help-block with-errors"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="event_location" placeholder="Location of event."
+                                                   value="<?= $talk['event_location'] ?>">
+                        <span class="help-block with-errors"></span>
+                    </div>
+
+                    <?php
+
+                }
+
                 ?>
+                
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-primary btn-block">Update</button>
                     </div>
                 </div>
                 <input type="hidden" name="id" value="<?= $talk['id'] ?>">
-            <?php else : ?>
+            <?php } else { ?>
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-primary btn-block">Create</button>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php } ?>
 
         </form>
 

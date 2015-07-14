@@ -15,5 +15,7 @@ CREATE TABLE `talks` (
   `votes` int(10) DEFAULT NULL,
   `host` varchar(256) NOT NULL,
   `description` varchar(140) NOT NULL,
+  `event_date` varchar(20) DEFAULT NULL,
+  `event_location` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
