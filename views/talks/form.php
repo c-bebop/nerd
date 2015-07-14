@@ -20,8 +20,8 @@
                 <span class="help-block with-errors"></span>
             </div>
             <div class="form-group">
-            <textarea class="form-control" type="text" name="description" id="descriptionArea" placeholder="Description what it's about"
-                      rows="4" required><?= $talk['description'] ?></textarea>
+            <textarea class="form-control" type="text" name="description" id="descriptionArea" placeholder="Description what it's about (maximum 140 characters)"
+                      rows="4" maxlength="140" required><?= $talk['description'] ?></textarea>
                 <span class="help-block with-errors"></span>
             </div>
             <div class="form-group"><input class="form-control" type="text" name="host" placeholder="Name of host or speaker"
