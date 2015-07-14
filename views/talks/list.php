@@ -8,6 +8,13 @@
       }
       else {
          foreach ($data['talks'] as $talk) {
+
+             $thumb = 'glyphicon glyphicon-thumbs-up';
+
+             if(Session::get('vote_' . $talk['id'])) {
+                 $thumb = 'glyphicon glyphicon-thumbs-down';
+             }
+
             echo
             '<div class="item col-md-4">
                <div class="talk thumbnail" style="background-image: url(' . $talk['image'] . ')">
@@ -19,7 +26,7 @@
                      <p class="talk-description">' . $talk['description'] . '</p>
                      <p><b>' . $talk[host] . '</b></p>
                      <span class="lead">' . $talk['votes'] . ' Votes</span>
-                     <a class="btn btn-default pull-right" href="' . DIR . 'talks/vote/' . $talk['id'] . '">Vote</a>
+                     <a class="btn btn-default pull-right" href="' . DIR . 'talks/vote/' . $talk['id'] . '"><span style="font-size: 1.5em" class="' . $thumb . '" aria-hidden="true"></span></a>
                   </div>
                </div>
             </div>';

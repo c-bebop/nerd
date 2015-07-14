@@ -104,12 +104,28 @@ class Talks extends Controller {
     public function vote($id) {
         $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
 
-        if ($this->_model->increase($id)) {
-            Message::set('Thanks for your participation.');
-        } else {
-            Message::set('I\'m sorry, Dave. I\'m afraid I can\'t do that.', 'danger');
-        }
+        $session_key = 'vote_' . $id;
 
+        if (Session::get($session_key)) {
+
+            if ($this->_model->decrease($id)) {
+                Session::clear($session_key);
+                Message::set('You\'ve successfully removed your vote.');
+            } else {
+                Message::set('I\'m sorry, Dave. I\'m afraid I can\'t do that.', 'danger');
+            }
+
+        } else {
+
+            if ($this->_model->increase($id)) {
+                Session::set($session_key);
+                Message::set('You\'ve successfully up voted this talk.');
+            } else {
+                Message::set('I\'m sorry, Dave. I\'m afraid I can\'t do that.', 'danger');
+            }
+
+        }
+        
         URL::redirect('');
     }
 

@@ -66,4 +66,11 @@ class Talk_Model extends Model {
       return $stmt->execute($test_array);
    }
 
+    public function decrease($id) {
+        //TODO: Check if this decrease is going to make the vote negative (< 0)
+        $stmt = $this->_db->prepare('UPDATE talks SET votes = votes-1 WHERE id = :id');
+        $test_array = array(':id' => $id);
+        return $stmt->execute($test_array);
+    }
+
 }
