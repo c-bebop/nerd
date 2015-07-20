@@ -20,8 +20,17 @@
                <div class="talk thumbnail" style="background-image: url(' . $talk['image'] . ')">
                   <div class="buttons-edit">
                      <a class="btn btn-default btn-sm" href="' . DIR . 'talks/edit/' . $talk['id'] . '">Edit</a>
-                  </div>
-                  <div class="talk-caption">
+                  </div>';
+
+                  if (Session::get('master')) {
+
+                      echo '<div class="buttons-delete">
+                                <a class="btn btn-default btn-sm" href="' . DIR . 'talks/delete/' . $talk['id'] . '">Delete</a>
+                            </div>';
+
+                  }
+
+                  echo '<div class="talk-caption">
                      <h4 class="talk-title"><a href="' . $talk['url'] . '" title="' . $talk['title'] . '">' . $talk['title'] . '</a></h4>
                      <p class="talk-description">' . $talk['description'] . '</p>
                      <p><b>' . $talk[host] . '</b></p>

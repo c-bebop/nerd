@@ -164,6 +164,19 @@ img
     visibility: hidden;
 }
 
+.talk .buttons-delete
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    visibility: hidden;
+}
+
+.talk:hover .buttons-delete
+{
+    visibility: visible;
+}
+
 .talk:hover .buttons-edit
 {
     visibility: visible;
