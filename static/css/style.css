@@ -94,7 +94,7 @@ img
 
 .jumbotron#nextTalk .container-fluid
 {
-    background-color: rgba(94, 173, 191, .6);
+    background-color: rgba(94, 173, 191, .9);
     padding:40px 30px 40px 30px;
 }
 
@@ -190,7 +190,7 @@ img
     left: 0;
     padding: 10px;
     color: #fff;
-    background-color: rgba(75, 158, 191, .6);
+    background-color: rgba(75, 158, 191, .9);
 }
 
 .talk .talk-title
