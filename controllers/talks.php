@@ -58,7 +58,6 @@ class Talks extends Controller {
         $data['title'] = filter_var(($_POST['title']), FILTER_SANITIZE_STRING);
         $data['url'] = filter_var($_POST['url'], FILTER_SANITIZE_URL);
         $data['image'] = filter_var($_POST['image'], FILTER_SANITIZE_URL);
-        $data['votes'] = 0;
         $data['host'] = filter_var($_POST['host'], FILTER_SANITIZE_STRING);
         $data['description'] = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
 
@@ -77,6 +76,7 @@ class Talks extends Controller {
             $this->_model->update_talk($data);
             Message::set('The Talk has successfully been edited!');
         } else {
+            $data['votes'] = 0;
             $this->_model->insert('talks', $data);
             Message::set('The Talk has successfully been created!');
         }
