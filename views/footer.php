@@ -6,7 +6,7 @@
                 <a href="">Home</a>
             </li>
             <li>
-                <a href="mailto:florian.willich@tu-berlin.de?subject=NERD%20Talk">Contact</a>
+                <a href="mailto:nerd@qu.tu-berlin.de?subject=NERD%20Talk">Contact</a>
             </li>
 
         </ol>
