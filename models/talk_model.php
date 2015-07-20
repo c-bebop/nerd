@@ -15,7 +15,8 @@ class Talk_Model extends Model {
    }
 
     public function get_next_talk() {
-        $result =  $this->_db->select('SELECT * FROM talks WHERE event_date IS NOT NULL');
+        $result = $this->_db->select('SELECT * FROM talks WHERE CHAR_LENGTH(event_date) >= 1');
+
         return $result[0];
     }
 

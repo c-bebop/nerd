@@ -8,10 +8,10 @@
             <li>
                 <a href="mailto:florian.willich@tu-berlin.de?subject=NERD%20Talk">Contact</a>
             </li>
-            <li>
-                Technische Universit&auml;t zu Berlin, Berlin, Germany &copy; 2014 - 2015
-            </li>
+
         </ol>
+        <p style="font-size: 8pt; color:#fff">Quality &amp; Usability Lab, Technische Universit&auml;t Berlin, Ernst-Reuter-Platz 7, 10587 Berlin, Germany &copy; 2014 - 2015
+        </p>
     </footer>
 </div>
 

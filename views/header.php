@@ -46,7 +46,7 @@
 
         <div class="row">
             <p>Nerd, Entertainment, Research and Design Talks at the Usability and Quality Labs, Technische Universi&auml;t
-                zu Berlin.</p>
+                 Berlin.</p>
         </div>
 
     </div>

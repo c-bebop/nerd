@@ -22,7 +22,7 @@ class Talks extends Controller {
             User::login($_POST['password']);
 
             if (!User::is_logged_in()) {
-                Message::set('Password falsch', 'danger');
+                Message::set('Wrong password! You are obviously not a NERD!', 'danger');
                 URL::redirect('talks/login/?redirected');
             }
             URL::redirect();
