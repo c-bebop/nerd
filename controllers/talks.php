@@ -9,6 +9,7 @@ class Talks extends Controller {
 
     public function index() {
         $data['title'] = 'NERD';
+        $data['next_talk'] = $this->_model->get_next_talk();
         $data['talks'] = $this->_model->all();
 
         $this->_view->render('header', $data);

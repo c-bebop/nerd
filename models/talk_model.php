@@ -14,6 +14,11 @@ class Talk_Model extends Model {
       return $this->_db->select('SELECT * FROM talks ORDER BY votes DESC LIMIT 0, 50');
    }
 
+    public function get_next_talk() {
+        $result =  $this->_db->select('SELECT * FROM talks WHERE event_date IS NOT NULL');
+        return $result[0];
+    }
+
    public function insert($table, $data) {
       $this->_db->insert($table, $data);
    }

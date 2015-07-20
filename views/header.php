@@ -29,7 +29,8 @@
                   <span class="input-group-btn">
                      <button type="submit" class="btn btn-default">Search</button>
                   </span>
-                </div><!-- /input-group -->
+                </div>
+                <!-- /input-group -->
             </div>
         </form>
         <ul class="nav navbar-nav navbar-right">
@@ -42,9 +43,43 @@
 <div class="jumbotron">
 
     <div class="container">
-        <p>Nerd, Entertainment, Research and Design Talks at the Usability and Quality Labs, Technische Universi&auml;t zu Berlin.</p>
+
+        <div class="row">
+            <p>Nerd, Entertainment, Research and Design Talks at the Usability and Quality Labs, Technische Universi&auml;t
+                zu Berlin.</p>
+        </div>
+
     </div>
 
 </div>
+
+<?php
+if (sizeof($data['next_talk'])) {
+    $talk = $data['next_talk'];
+
+    ?>
+
+    <div class="jumbotron" id="nextTalk" style="background-image: url(<?php echo $talk['image'] ?>)">
+
+        <div class="container-fluid">
+            <div class="container" >
+                <div class="row">
+                    <?php
+
+                    echo '<p style="font-size:12pt; font-weight: bold">Next Talk by ' . $talk['host'] . '</p>';
+                    echo '<p style="font-size:24pt; font-weight: normal">' . $talk['title'] . '</p>';
+                    echo '<p style="font-size:10pt;">' . $talk['description'] . '<br/><br/></p>';
+                    echo '<p style="font-size:12pt; font-weight: bold; text-align: right"> ' . $talk['event_date'] . ' &nbsp;/&nbsp; ' . $talk['event_location'] . '</p>';
+                    ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<?php
+}
+?>
+
 
 <div class="container">
