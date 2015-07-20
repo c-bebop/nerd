@@ -61,6 +61,14 @@ class Talks extends Controller {
         $data['host'] = filter_var($_POST['host'], FILTER_SANITIZE_STRING);
         $data['description'] = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
 
+        if (isset($_POST['event_date'])) {
+            $data['event_date'] = filter_var($_POST['event_date'], FILTER_SANITIZE_STRING);
+        }
+
+        if (isset($_POST['event_location'])) {
+            $data['event_location'] = filter_var($_POST['event_location'], FILTER_SANITIZE_STRING);
+        }
+
         if (strlen($data['title']) <= 2 || strlen($data['host']) <= 2 || strlen($data['description']) <= 9) {
             Message::set('One or more fields are not properly filled!', 'danger');
         } else if (isset($_POST['id'])) {

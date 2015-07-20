@@ -20,11 +20,13 @@
                 <span class="help-block with-errors"></span>
             </div>
             <div class="form-group">
-            <textarea class="form-control" type="text" name="description" id="descriptionArea" placeholder="Description what it's about (maximum 140 characters)"
+            <textarea class="form-control" type="text" name="description" id="descriptionArea"
+                      placeholder="Description what it's about (maximum 140 characters)"
                       rows="4" maxlength="140" required><?= $talk['description'] ?></textarea>
                 <span class="help-block with-errors"></span>
             </div>
-            <div class="form-group"><input class="form-control" type="text" name="host" placeholder="Name of host or speaker"
+            <div class="form-group"><input class="form-control" type="text" name="host"
+                                           placeholder="Name of host or speaker"
                                            value="<?= $talk['host'] ?>" required>
                 <span class="help-block with-errors"></span>
             </div>
@@ -44,29 +46,25 @@
 
             <?php
             if (isset($talk['id'])) {
-
                 if (Session::get('master')) {
-
                     ?>
 
                     <div class="form-group">
                         <input class="form-control" type="text" name="event_date" placeholder="Date of event."
-                                                   value="<?= $talk['event_date'] ?>">
+                               value="<?= $talk['event_date'] ?>">
                         <span class="help-block with-errors"></span>
                     </div>
 
                     <div class="form-group">
                         <input class="form-control" type="text" name="event_location" placeholder="Location of event."
-                                                   value="<?= $talk['event_location'] ?>">
+                               value="<?= $talk['event_location'] ?>">
                         <span class="help-block with-errors"></span>
                     </div>
 
-                    <?php
-
+                <?php
                 }
-
                 ?>
-                
+
                 <div class="row">
                     <div class="col-xs-6">
                         <button type="submit" class="btn btn-primary btn-block">Update</button>
