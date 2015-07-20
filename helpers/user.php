@@ -8,11 +8,11 @@ class User {
 
    public static function login($password) {
 
-       if (hash_equals(PW_USER,   crypt($password, PW_USER))) {
+       if (PW_USER === hash('sha256', $password)) {
            Session::set('logged_in');
        }
 
-       if (hash_equals(PW_MASTER, crypt($password, PW_MASTER))) {
+       if (PW_MASTER === hash('sha256', $password)) {
            Session::set('logged_in');
            Session::set('master');
        }
